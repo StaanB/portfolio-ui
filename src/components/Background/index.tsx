@@ -82,7 +82,7 @@ const Background = () => {
                 enable: true,
                 area: 1000,
               },
-              value: 80,
+              value: 120,
             },
             opacity: {
               value: 0.5,
