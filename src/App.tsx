@@ -1,16 +1,19 @@
-import Background from "./components/Background"
-import Banner from "./components/Banner"
-import Navbar from "./components/Navbar"
+import About from "./components/About";
+import Background from "./components/Background";
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
+import SocialMedias from "./components/SocialMedias";
 
 const App = () => {
-
   return (
     <>
-      <Background />
       <Navbar />
+      <SocialMedias />
       <Banner />
+      <About />
+      <Background />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

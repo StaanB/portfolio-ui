@@ -3,6 +3,8 @@ import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
+import { colors } from "@/lib/utils";
+
 const Background = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
@@ -58,10 +60,10 @@ const Background = () => {
           },
           particles: {
             color: {
-              value: "#78716c",
+              value: colors.mainColor,
             },
             links: {
-              color: "#78716c",
+              color: colors.secondaryColor,
               distance: 100,
               enable: true,
               opacity: 0.3,

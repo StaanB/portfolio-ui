@@ -1,64 +1,38 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-
-import { Linkedin } from "lucide-react";
-import { Github } from "lucide-react";
-import { Instagram } from "lucide-react";
-import { SendHorizonal } from "lucide-react";
 import { ArrowBigDown } from "lucide-react";
 
 import bgMe from "../../assets/me-color.jpg";
 
+import { colors } from "@/lib/utils";
+
 const Banner = () => {
   return (
     <>
-      <div className="max-w-screen h-[85vh] flex flex-wrap items-center justify-between mx-14 py-5">
-        <ul className="flex flex-col gap-6">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/stanley-brenner-front-end/"
-              target="_blank"
-            >
-              <Linkedin className="hover:text-orange-600" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/StaanB" target="_blank">
-              <Github className="hover:text-orange-600" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/staanb/" target="_blank">
-              <Instagram className="hover:text-orange-600" />
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/+5571986895914" target="_blank">
-              <SendHorizonal className="hover:text-orange-600" />
-            </a>
-          </li>
-        </ul>
-
+      <div
+        id="home"
+        className="w-11/12 m-auto h-[80vh] xl:h-[85vh] flex flex-col xl:flex-wrap items-center justify-center"
+      >
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{
             type: "spring",
-            stiffness: 260,
             damping: 100,
+            duration: 2,
           }}
         >
           <img
             src={bgMe}
             alt="Stanley"
-            className="bg-contain w-[45rem] relative right-36 rounded-full"
+            className="object-cover w-[20rem] md:w-[25rem] xl:w-[45rem] mt-10 xl:mt-0 relative xl:right-30 rounded-full"
           />
         </motion.div>
 
-        <div className="relative right-[18rem] bottom-[5rem]">
+        <div className="flex flex-col items-center justify-center text-center relative w-full xl:w-[25%] xl:right-[12rem]">
           <motion.h1
-            whileHover={{ color: "#ea580c" }}
-            className="w-[6rem] relative right-[6rem] text-[6rem] uppercase font-bold text-start cursor-pointer"
+            whileHover={{ color: colors.mainColor }}
+            className="text-[2rem] md:text-[4rem] xl:text-[6rem] uppercase font-bold text-start cursor-pointer"
           >
             <Typewriter
               options={{
@@ -69,14 +43,14 @@ const Banner = () => {
               }}
             />
           </motion.h1>
-          <h2 className="text-[3rem] uppercase font-bold text-center tracking-[2rem]">
+          <h2 className="text-[1rem] md:text-[2rem] xl:text-[3rem] uppercase font-bold text-center tracking-[1rem]">
             Front-End
           </h2>
-          <p className="text-[2rem] mt-4 uppercase font-thin text-center">
+          <p className="md:text-[1rem] xl:text-[1.5rem] mt-4 uppercase font-thin text-center">
             Stanley Brenner
           </p>
         </div>
-        <ArrowBigDown className="fixed animate-bounce left-[95vw] top-[90vh]" />
+        <ArrowBigDown className="fixed animate-bounce xl:left-[95vw] top-[95vh] hover:text-orange-600 backdrop-blur-sm z-50" />
       </div>
     </>
   );
