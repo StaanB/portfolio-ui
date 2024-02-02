@@ -50,7 +50,7 @@ const Banner = () => {
             Stanley Brenner
           </p>
         </div>
-        <ArrowBigDown className="fixed animate-bounce xl:left-[95vw] top-[95vh] hover:text-orange-600 backdrop-blur-sm z-50" />
+        <ArrowBigDown className="fixed animate-bounce xl:left-[95vw] xl:top-[90vh] hover:text-orange-600 backdrop-blur-sm z-50" />
       </div>
     </>
   );
