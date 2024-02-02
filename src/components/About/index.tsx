@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-11/12 m-auto mt-72 min-[420px]:mt-[40vh] md:mt-[60vh] lg:mt-[60vh] xl:mt-20 flex flex-col-reverse xl:flex-row h-[90vh] xl:h-[85vh]"
+      className="w-11/12 m-auto mt-80 min-[420px]:mt-[40vh] md:mt-[60vh] lg:mt-[60vh] xl:mt-20 flex flex-col-reverse xl:flex-row h-[90vh] xl:h-[85vh]"
     >
       <div className="flex flex-col justify-center items-center text-center">
         <motion.div
