@@ -5,7 +5,7 @@ import { SendHorizonal } from "lucide-react";
 
 const SocialMedias = () => {
   return (
-    <ul className="fixed w-fit md:w-10 md:h-56 top-[12vh] md:top-1/3 left-[20vw] md:left-[5vw] flex md:flex-col xl:flex-col gap-8 xl:gap-6 items-center z-50 backdrop-blur-sm">
+    <ul className="fixed w-fit md:w-10 md:h-56 top-[12vh] md:top-1/3 left-[20vw] min-[420px]:left-[30vw] md:left-[5vw] flex md:flex-col xl:flex-col gap-8 xl:gap-6 items-center z-50 backdrop-blur-sm">
       <li>
         <a
           href="https://www.linkedin.com/in/stanley-brenner-front-end/"

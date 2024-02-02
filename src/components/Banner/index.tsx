@@ -25,11 +25,11 @@ const Banner = () => {
           <img
             src={bgMe}
             alt="Stanley"
-            className="object-cover w-[20rem] md:w-[25rem] xl:w-[45rem] mt-10 xl:mt-0 relative xl:right-30 rounded-full"
+            className="object-cover w-[20rem] md:w-[25rem] lg:w-[20rem] xl:w-[45rem] mt-10 lg:mt-32 xl:mt-0 relative xl:right-30 rounded-full"
           />
         </motion.div>
 
-        <div className="flex flex-col items-center justify-center text-center relative w-full xl:w-[25%] xl:right-[12rem]">
+        <div className="flex flex-col items-center justify-center text-center relative w-full xl:w-[25%] lg:bottom-20 xl:right-[12rem]">
           <motion.h1
             whileHover={{ color: colors.mainColor }}
             className="text-[2rem] md:text-[4rem] xl:text-[6rem] uppercase font-bold text-start cursor-pointer"

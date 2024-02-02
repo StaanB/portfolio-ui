@@ -80,3 +80,13 @@
     padding-top: 10vh;
   }
 }
+
+@media (min-width: 1280px) {
+  .card-row {
+    flex-direction: row;
+  }
+
+  .card-reverse {
+    flex-direction: row-reverse;
+  }
+}
