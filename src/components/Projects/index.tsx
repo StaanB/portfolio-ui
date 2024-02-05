@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div
       id="portfolio"
-      className="w-11/12 m-auto mt-20 md:mt-[60vh] lg:mt-20 xl:mt-40 flex flex-col items-center justify-between h-[90vh] xl:h-[85vh]"
+      className="w-11/12 m-auto mt-20 md:mt-[60vh] lg:mt-20 xl:mt-40 flex flex-col items-center justify-between h-auto"
     >
       <motion.div
         initial={{ opacity: 0 }}

@@ -1,9 +1,10 @@
+import Navbar from "./components/Navbar";
+import SocialMedias from "./components/SocialMedias";
+import Banner from "./components/Banner";
 import About from "./components/About";
 import Background from "./components/Background";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import SocialMedias from "./components/SocialMedias";
+import ContactMe from "./components/ContactMe";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <About />
       <Background />
       <Projects />
+      <ContactMe />
     </>
   );
 };
