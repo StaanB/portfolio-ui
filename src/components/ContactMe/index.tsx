@@ -7,46 +7,72 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+
+import emailjs from "@emailjs/browser";
 
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 import { Pin } from "lucide-react";
 
 const ContactMe = () => {
+  // Usando Zod para validar os formulários
   const formSchema = z.object({
-    email: z.string().email().min(1, "Esse campo é obrigatório!"),
-    name: z.string().min(3, "Seu nome deve conter pelo menos 3 caracteres!"),
+    email: z
+      .string()
+      .email("Esse email não é válido")
+      .min(1, "Esse campo é obrigatório!"),
+    user_name: z
+      .string()
+      .min(3, "Seu nome deve conter pelo menos 3 caracteres!"),
     message: z.string().min(5, "O campo de mensagem é obrigatório!").max(100),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
+    // Setando estados iniciais
     resolver: zodResolver(formSchema),
+    mode: "all",
     defaultValues: {
       email: "",
-      name: "",
+      user_name: "",
       message: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    // Função a ser executada quando o formulário for enviado.
+    const templateParams = {
+      from_name: values.user_name,
+      email: values.email,
+      message: values.message,
+    };
+
+    emailjs
+      .send(
+        "service_jpolc08",
+        "template_3q4r0m2",
+        templateParams,
+        "VemyZsOKi3sIef0NR"
+      )
+      .then(() => {
+        alert("O Email foi enviado com sucesso!");
+        form.reset({ email: "", user_name: "", message: "" });
+      });
   }
 
   return (
-    <div className="w-11/12 m-auto h-[80vh] xl:h-[100vh] flex flex-col xl:flex-row items-center justify-center">
+    // Seção de contato
+    <div id="contact" className="w-11/12 m-auto h-[80vh] xl:h-[100vh] flex flex-col md:flex-row xl:flex-row items-center justify-center">
       <div className="w-full xl:w-1/2 m-auto text-center">
         <h3 className="w-3/4 xl:w-2/6 m-auto xl:mb-8 text-2xl xl:text-3xl font-bold uppercase p-3 border-b-white border-b-2">
           Fale comigo!
         </h3>
-        <ul className="w-full mt-5 flex flex-col items-center justify-center gap-5 xl:gap-10 font-bold">
-          <div className="w-5/6 xl:w-72 flex items-center justify-stretch xl:justify-start gap-5 text-lg">
+        <ul className="w-full mt-5 md:mt-0 md:mb-32 flex flex-col items-center justify-center gap-5 xl:gap-10 font-bold">
+          <div className="w-5/6 xl:w-72 flex items-center justify-stretch xl:justify-start gap-5 text-md xl:text-lg">
             <Mail className="text-stone-600" />
             <li>stanleybrenner@gmail.com</li>
           </div>
@@ -62,9 +88,12 @@ const ContactMe = () => {
           </div>
         </ul>
       </div>
-
+      {/*Formulário com ShadcnUI  */}
       <Form {...form}>
-        <form onSubmit={() => onSubmit} className="w-full xl:w-1/2 space-y-8">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="w-full mb-20 xl:mb-0 xl:w-1/2 space-y-8"
+        >
           <FormField
             control={form.control}
             name="email"
@@ -72,6 +101,7 @@ const ContactMe = () => {
               <FormItem>
                 <FormControl>
                   <Input
+                    id="email"
                     placeholder="Email"
                     {...field}
                     className="w-full xl:w-1/2 bg-white text-stone-900"
@@ -84,7 +114,7 @@ const ContactMe = () => {
 
           <FormField
             control={form.control}
-            name="name"
+            name="user_name"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -101,7 +131,7 @@ const ContactMe = () => {
 
           <FormField
             control={form.control}
-            name="email"
+            name="message"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -115,7 +145,9 @@ const ContactMe = () => {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button className="hover:bg-orange-600 ease-in" type="submit">
+            Enviar
+          </Button>
         </form>
       </Form>
     </div>

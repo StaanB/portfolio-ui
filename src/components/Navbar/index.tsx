@@ -59,7 +59,15 @@ const Navbar = () => {
             whileHover={{ color: colors.mainColor }}
             className="font-medium cursor-pointer"
           >
-            <a href="#">Contato</a>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={700}
+            >
+              Contato
+            </Link>
           </motion.li>
         </ul>
       </div>
