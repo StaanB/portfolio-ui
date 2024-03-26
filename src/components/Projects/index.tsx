@@ -4,6 +4,7 @@ import CardProject from "../CardProject";
 
 import eplay from "../../assets/foto-eplay.png";
 import efood from "../../assets/foto-efood-site.png";
+import giphy from '../../assets/foto-giphy-project.png'
 
 const Projects = () => {
   return (
@@ -39,13 +40,23 @@ const Projects = () => {
       />
 
       <CardProject
+        cardPicture={giphy}
+        projectName="GIPHY Project📷"
+        description="Projeto simples usando API Rest e consumindo a API do Giphy com o Kendo UI como componentes principais."
+        tags={["ReactJS", "API Rest", "Kendo UI"]}
+        linkGithub="https://github.com/StaanB/giphy-project"
+        linkDemo="https://giphy-project-pied.vercel.app/"
+        flexRow="card-reverse"
+      />
+
+      <CardProject
         cardPicture={efood}
         projectName="Efood🍽️"
         description="A Efood é um site de delivery e entregas feito com ReactJS, usando uma API fake para restaurantes ela conta com carrinho, checkout, pagamento e entrega"
         tags={["ReactJS", "Styled-Components"]}
         linkGithub="https://github.com/StaanB/EFOOD"
         linkDemo="https://efood-blue.vercel.app/"
-        flexRow="card-reverse"
+        flexRow="card-row"
       />
     </div>
   );
