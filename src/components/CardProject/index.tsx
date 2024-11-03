@@ -9,8 +9,8 @@ type CardProps = {
   projectName: string;
   description: string;
   tags: string[];
-  linkGithub: string;
-  linkDemo: string;
+  linkGithub?: string;
+  linkDemo?: string;
   flexRow: string;
 };
 
@@ -41,7 +41,7 @@ const CardProject = ({
           <h3 className="text-xl uppercase font-bold mb-5 mt-5 xl:mt-0 lg:mt-2">
             {projectName}
           </h3>
-          <p className="w-full xl:w-2/5 mb-5">{description}</p>
+          <p className="w-full xl:w-10/12 mb-5">{description}</p>
 
           <ul className="w-5/6 lg:w-1/3 xl:w-1/3 flex justify-between items-center font-bold mb-5">
             {tags.map((tag) => {
@@ -56,7 +56,11 @@ const CardProject = ({
               className="flex gap-1"
               target="_blank"
             >
-              Code <Github />
+              {linkGithub ? (
+                <>
+                  Code <Github />
+                </>
+              ) : ""}
             </motion.a>
             <motion.a
               whileHover={{ color: colors.mainColor }}
@@ -64,7 +68,12 @@ const CardProject = ({
               className="flex gap-1"
               target="_blank"
             >
-              Acesse! <ArrowUpRightFromSquare />
+              {linkDemo ? (
+                <>
+                  Acesse! <ArrowUpRightFromSquare />
+                </>
+              ) : ""}
+
             </motion.a>
           </div>
         </div>

@@ -4,7 +4,8 @@ import CardProject from "../CardProject";
 
 import eplay from "../../assets/foto-eplay.png";
 import efood from "../../assets/foto-efood-site.png";
-import giphy from '../../assets/foto-giphy-project.png'
+import dpms from "../../assets/dpms-foto.jpeg";
+import digitalize from "../../assets/digitalize.png";
 
 const Projects = () => {
   return (
@@ -28,6 +29,22 @@ const Projects = () => {
       </motion.div>
 
       <CardProject
+        cardPicture={dpms}
+        projectName="DPMS"
+        description="DPMS é um site desenvolvido na empresa Oxeanbits, um projeto completo e fascinante feito para gerenciar e organizar tarefas executadas em ambientes de construção civil, nele é utilizado várias tecnologias de ponta e diversas soluções tecnológicas"
+        tags={["ReactJS", "SAAS", "Ruby", "Jest"]}
+        flexRow="card-row"
+      />
+
+      <CardProject
+        cardPicture={digitalize}
+        projectName="Digitalize"
+        description="Digitalize é um aplicativo desenvolvido para várias plataformas, servindo como gerenciador complexo de tabelas e completamente flexível sedo usado para gerenciar academias, hospitais, igrejas e diversos tipos de empresas"
+        tags={["Flutter", "Dart", "GraphQL"]}
+        flexRow="card-reverse"
+      />
+
+      <CardProject
         cardPicture={eplay}
         projectName="Eplay🎮"
         description="A Eplay é uma e-commerce de games online para compra de jogos, a
@@ -40,23 +57,13 @@ const Projects = () => {
       />
 
       <CardProject
-        cardPicture={giphy}
-        projectName="GIPHY Project📷"
-        description="Projeto simples usando API Rest e consumindo a API do Giphy com o Kendo UI como componentes principais."
-        tags={["ReactJS", "API Rest", "Kendo UI"]}
-        linkGithub="https://github.com/StaanB/giphy-project"
-        linkDemo="https://giphy-project-pied.vercel.app/"
-        flexRow="card-reverse"
-      />
-
-      <CardProject
         cardPicture={efood}
         projectName="Efood🍽️"
         description="A Efood é um site de delivery e entregas feito com ReactJS, usando uma API fake para restaurantes ela conta com carrinho, checkout, pagamento e entrega"
         tags={["ReactJS", "Styled-Components"]}
         linkGithub="https://github.com/StaanB/EFOOD"
         linkDemo="https://efood-blue.vercel.app/"
-        flexRow="card-row"
+        flexRow="card-reverse"
       />
     </div>
   );

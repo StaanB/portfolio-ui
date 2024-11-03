@@ -20,7 +20,7 @@ const SocialMedias = () => {
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/staanb/" target="_blank">
+        <a href="https://www.instagram.com/_staanb/" target="_blank">
           <Instagram className="hover:text-orange-600" />
         </a>
       </li>

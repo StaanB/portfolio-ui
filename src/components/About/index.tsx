@@ -1,7 +1,7 @@
 import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
-import mePicture from "../../assets/me-picture.png";
+import mePicture from "../../assets/me-picture.jpeg";
 
 const About = () => {
   return (
@@ -33,25 +33,17 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2019} anos
+              {new Date().getFullYear() - 2019} anos - HTML, CSS, JS
             </label>
             <span className="flex items-center uppercase font-bold">
-              <Progress value={80} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              HTML
-            </span>
-          </motion.div>
+              <Progress value={80} className="min-w-[25rem] bg-stone-600 mr-5" />{" "}
+              
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" className="w-8" />
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" className="w-8" />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2019} anos
-            </label>
-            <span className="flex items-center uppercase font-bold">
-              <Progress value={80} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              CSS
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" className="w-8" />
+
             </span>
           </motion.div>
 
@@ -61,25 +53,14 @@ const About = () => {
             transition={{ duration: 1.5 }}
           >
             <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2021} anos
+              {new Date().getFullYear() - 2021} anos - Bootstrap, Tailwind
             </label>
             <span className="flex items-center uppercase font-bold">
-              <Progress value={60} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              Bootstrap
-            </span>
-          </motion.div>
+              <Progress value={60} className="min-w-[25rem] bg-stone-600 mr-5" />{" "}
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-          >
-            <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2019} anos
-            </label>
-            <span className="flex items-center uppercase font-bold">
-              <Progress value={80} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              Javascript
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" className="w-8 mr-1" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="w-8" />
             </span>
           </motion.div>
 
@@ -89,11 +70,14 @@ const About = () => {
             transition={{ duration: 2.5 }}
           >
             <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2021} anos
+              {new Date().getFullYear() - 2021} anos - React, Typescript
             </label>
             <span className="flex items-center uppercase font-bold">
-              <Progress value={60} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              Typescript
+              <Progress value={60} className="min-w-[25rem] bg-stone-600 mr-5" />{" "}
+              
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="w-8 mr-1" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" className="w-8" />
             </span>
           </motion.div>
 
@@ -103,12 +87,16 @@ const About = () => {
             transition={{ duration: 3 }}
           >
             <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2021} anos
+              {new Date().getFullYear() - 2024} anos - Go, Flutter, Dart
             </label>
             <span className="flex items-center uppercase font-bold">
-              <Progress value={60} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              ReactJS
-            </span>
+              <Progress value={10} className="min-w-[25rem] bg-stone-600 mr-5" />{" "}
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" className="w-8 mr-1" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" className="w-8" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" className="w-8" />
+            </span> 
           </motion.div>
 
           <motion.div
@@ -117,11 +105,15 @@ const About = () => {
             transition={{ duration: 3.5 }}
           >
             <label className="uppercase font-bold">
-              {new Date().getFullYear() - 2023} anos
+              {new Date().getFullYear() - 2024} ano - Docker, MongoDB, GraphQL
             </label>
             <span className="flex items-center uppercase font-bold">
-              <Progress value={20} className="w-[30rem] bg-stone-600 mr-5" />{" "}
-              NextJS
+              <Progress value={20} className="min-w-[25rem] bg-stone-600 mr-5" />{" "}
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" className="w-8 mr-1" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg"className="w-8" />
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" className="w-8" />
             </span>
           </motion.div>
         </div>
